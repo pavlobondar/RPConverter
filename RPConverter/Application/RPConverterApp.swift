@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct RPConverterApp: App {
+    let monitor = NetworkMonitor()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConverterView()
+                .environmentObject(monitor)
         }
     }
 }
